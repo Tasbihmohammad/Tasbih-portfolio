@@ -1,19 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Tasbih Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasbih AlQudah | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
+
 <body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="logo" href="#">Tasbih<span>.</span></a>
 
-  <h1>Tasbih AlQudah</h1>
-  <p>Future Full Stack Developer</p>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <h2>About Me</h2>
-  <p>I am building my full stack journey step by step.</p>
+      <button class="btn btn--ghost" id="themeBtn" type="button">Toggle theme</button>
+    </div>
+  </header>
 
-  <h2>Projects</h2>
-  <p>Project 1: My Portfolio Website</p>
+  <main class="container">
+    <section class="hero">
+      <div class="hero__text">
+        <p class="badge">Future Full-Stack Developer</p>
+        <h1>Tasbih AlQudah</h1>
+        <p class="lead">
+          I’m building my full-stack journey step by step. I love practical projects and learning by doing.
+        </p>
 
+        <div class="hero__cta">
+          <a class="btn" href="#projects">See projects</a>
+          <a class="btn btn--outline" href="#contact">Contact me</a>
+        </div>
+
+        <div class="links">
+          <a class="link" href="https://github.com/Tasbihmohammad" target="_blank" rel="noreferrer">GitHub</a>
+          <span class="dot">•</span>
+          <a class="link" href="#" id="copyLink" type="button">Copy site link</a>
+        </div>
+
+        <p class="mini" id="status"></p>
+      </div>
+
+      <div class="card hero__card">
+        <h2 class="card__title">Quick Info</h2>
+        <ul class="list">
+          <li><span>Location</span><strong>Canada</strong></li>
+          <li><span>Focus</span><strong>Full-Stack</strong></li>
+          <li><span>Next</span><strong>Projects + GitHub</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About Me</h2>
+      <p>
+        I hold a Bachelor’s in Software Engineering and a Master’s in Computer Science. My goal is to grow into a full-stack
+        developer through real projects and consistent practice.
+      </p>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section__head">
+        <h2>Projects</h2>
+        <p class="muted">Every project will be pushed to GitHub.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Portfolio Website</h3>
+          <p class="muted">My first live website using GitHub Pages.</p>
+          <div class="card__actions">
+            <a class="btn btn--small" href="#" id="openLive">Open live</a>
+            <a class="btn btn--small btn--outline" href="https://github.com/Tasbihmohammad/Tasbih-portfolio" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Coming Soon</h3>
+          <p class="muted">Next project: To-Do App (HTML/CSS/JS).</p>
+          <div class="card__actions">
+            <span class="pill">Planned</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Coming Soon</h3>
+          <p class="muted">Next project: Mini Landing Page + Form.</p>
+          <div class="card__actions">
+            <span class="pill">Planned</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="chips">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">Git & GitHub</span>
+        <span class="chip">JavaScript (learning)</span>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p class="muted">Add your email/LinkedIn later. For now, this is enough.</p>
+
+      <div class="card">
+        <form class="form" id="contactForm">
+          <label>
+            Your name
+            <input class="input" name="name" placeholder="Your name" required />
+          </label>
+
+          <label>
+            Message
+            <textarea class="input" name="message" rows="4" placeholder="Write a short message..." required></textarea>
+          </label>
+
+          <button class="btn" type="submit">Send (demo)</button>
+          <p class="mini" id="formMsg"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="muted">© <span id="year"></span> Tasbih AlQudah — Built with HTML/CSS/JS</p>
+    </footer>
+  </main>
 </body>
 </html>
